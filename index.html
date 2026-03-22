@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДомСтрой - Строительство домов под ключ</title>
+    <!-- Подключаем стили -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo">Дом<span>Строй</span></div>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#hero">Главная</a></li>
+                    <li><a href="#history">О нас</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#portfolio">Портфолио</a></li>
+                </ul>
+            </nav>
+            <div class="header-contacts">
+                <a href="tel:89504605265" class="phone">8 (950) 460-52-65</a>
+                <button class="btn open-modal-btn">Заказать звонок</button>
+                <div class="burger" id="burgerBtn">☰</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Строим дома вашей мечты по честной цене. Качество, проверенное временем.</h1>
+                <p>Гарантия на все виды работ 5 лет. Смета фиксируется в договоре.</p>
+            </div>
+            <div class="hero-form">
+                <h3>Рассчитать стоимость</h3>
+                <form onsubmit="event.preventDefault(); alert('Спасибо! Мы свяжемся с вами.');">
+                    <div class="form-group">
+                        <input type="text" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Телефон" required>
+                    </div>
+                    <button type="submit" class="btn">Получить смету</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="history" id="history">
+        <div class="container history-grid">
+            <div class="history-img">
+                <!-- Плейсхолдер для фото Олега -->
+                <img src="https://placehold.co/600x400/222/fff?text=Олег+на+объекте" alt="Руководитель Олег">
+            </div>
+            <div class="history-text">
+                <h2>«Я знаю цену каждому рублю, потому что начинал с нуля.»</h2>
+                <p>Меня зовут Олег. 10 лет назад я был студентом без связей и капитала. Я начал работать своими руками, чтобы оплатить учебу. Я видел, как другие фирмы накручивают цены и халтурят.</p>
+                <p>Я решил сделать иначе: строить так, как строил бы для себя, и брать честную плату за труд. Сегодня "ДомСтрой" — это команда профи, но мой принцип остался прежним: качество не должно стоить дорого.</p>
+                <p><strong>— Олег, основатель ДомСтрой</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages -->
+    <section class="advantages">
+        <div class="container">
+            <h2 class="section-title">Три причины доверить нам свой дом</h2>
+            <div class="adv-grid">
+                <div class="adv-card">
+                    <div class="adv-icon">★</div>
+                    <h3>Качественная работа</h3>
+                    <p>Используем только сертифицированные материалы. Собственный технадзор на каждом этапе. Никаких "кривых стен".</p>
+                </div>
+                <div class="adv-card">
+                    <div class="adv-icon">👷</div>
+                    <h3>Специализированные работники</h3>
+                    <p>В штате не разнорабочие, а узкие профи: каменщики, электрики, кровельщики с опытом от 7 лет.</p>
+                </div>
+                <div class="adv-card">
+                    <div class="adv-icon">₽</div>
+                    <h3>Низкие цены</h3>
+                    <p>Прямые контракты с поставщиками и отсутствие посредников позволяют нам держать цены на 15-20% ниже рынка.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Что мы строим и ремонтируем</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://placehold.co/400x300/orange/white?text=Дом+под+ключ" alt="Дом под ключ">
+                    <div class="service-overlay">
+                        <h3>Строительство домов под ключ</h3>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://placehold.co/400x300/333/fff?text=Фундамент" alt="Фундамент">
+                    <div class="service-overlay">
+                        <h3>Фундаментные работы</h3>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://placehold.co/400x300/orange/white?text=Кровля" alt="Кровля">
+                    <div class="service-overlay">
+                        <h3>Кровля и фасады</h3>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://placehold.co/400x300/333/fff?text=Ремонт" alt="Ремонт">
+                    <div class="service-overlay">
+                        <h3>Внутренняя отделка</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Slider -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Наши работы говорят громче слов</h2>
+            <div class="slider-container">
+                <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+                <div class="slider-track" id="sliderTrack">
+                    <!-- Slide 1 -->
+                    <div class="slide">
+                        <img src="https://placehold.co/800x400/222/fff?text=Объект:+Дом+в+лесу" alt="Дом 1">
+                        <div class="slide-info">
+                            <h3>Дом в лесу</h3>
+                            <p>Срок: 4 месяца | Эконом</p>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="slide">
+                        <img src="https://placehold.co/800x400/ff6b00/fff?text=Объект:+Коттедж+Премиум" alt="Дом 2">
+                        <div class="slide-info">
+                            <h3>Коттедж "Премиум"</h3>
+                            <p>Срок: 8 месяцев | Премиум</p>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="slide">
+                        <img src="https://placehold.co/800x400/333/fff?text=Объект:+Ремонт+офиса" alt="Ремонт">
+                        <div class="slide-info">
+                            <h3>Ремонт офиса</h3>
+                            <p>Срок: 1 месяц | Бизнес</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps -->
+    <section class="steps">
+        <div class="container">
+            <h2 class="section-title">Путь к вашему новому дому</h2>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-num">1</div>
+                    <h3>Заявка и замер</h3>
+                    <p>Бесплатно</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">2</div>
+                    <h3>Смета и договор</h3>
+                    <p>Фиксация цены</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">3</div>
+                    <h3>Старт работ</h3>
+                    <p>Закупка материалов</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">4</div>
+                    <h3>Сдача работ</h3>
+                    <p>Оплата по факту</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">5</div>
+                    <h3>Ключи</h3>
+                    <p>Финальная уборка</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Magnet -->
+    <section class="lead-magnet">
+        <div class="container">
+            <h2>Сомневаетесь в расчетах?</h2>
+            <p>Пришлите нам смету от другой компании, и мы найдем, где можно сэкономить без потери качества.</p>
+            <form class="lead-form" onsubmit="event.preventDefault(); alert('Смета отправлена!');">
+                <input type="email" placeholder="Ваш Email для связи" required>
+                <button type="submit" class="btn">Загрузить смету</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>ДомСтрой</h4>
+                    <p>Строим будущее с заботой о настоящем.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li>8 (950) 460-52-65</li>
+                        <li>г. Москва, ул. Строителей, д. 10</li>
+                        <li>info@domstroy.ru</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Соцсети</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">VKontakte</a></li>
+                        <li><a href="#">Telegram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ДомСтрой. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Window -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 style="text-align: center; margin-bottom: 20px;">Заказать звонок</h3>
+            <form onsubmit="event.preventDefault(); alert('Мы перезвоним вам в течение 15 минут!'); document.getElementById('modal').style.display='none';">
+                <div class="form-group">
+                    <input type="text" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Ваш телефон" required>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Жду звонка</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Подключаем скрипт -->
+    <script src="script.js"></script>
+</body>
+</html>
