@@ -112,7 +112,7 @@ header {
 
 /* --- HERO SECTION --- */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/foresthome.png.jpg');
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/stroika.png.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
