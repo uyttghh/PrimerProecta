@@ -3,259 +3,992 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ДомСтрой - Строительство домов под ключ</title>
-    <!-- Подключаем стили -->
+    <title>PC RepairMan — Сборка и ремонт компьютеров</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-    <!-- Header -->
-    <header>
-        <div class="container header-inner">
-            <div class="logo">Дом<span>Строй</span></div>
-            <nav>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#hero">Главная</a></li>
-                    <li><a href="#history">О нас</a></li>
-                    <li><a href="#services">Услуги</a></li>
-                    <li><a href="#portfolio">Портфолио</a></li>
-                </ul>
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-microchip"></i>
+                <span>PC Repair<span class="text-red">Man</span></span>
+            </a>
+            
+            <nav class="nav" id="nav">
+                <a href="#services">Услуги</a>
+                <a href="#prices">Цены</a>
+                <a href="#about">О нас</a>
+                <a href="#reviews">Отзывы</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contacts">Контакты</a>
             </nav>
-            <div class="header-contacts">
-                <a href="tel:89504605265" class="phone">8 (950) 460-52-65</a>
-                <button class="btn open-modal-btn">Заказать звонок</button>
-                <div class="burger" id="burgerBtn">☰</div>
+            
+            <div class="header-actions">
+                <a href="tel:+79990000000" class="phone">
+                    <i class="fas fa-phone"></i>
+                    <span>+7 (950) 460-52-65</span>
+                </a>
+                <a href="#contacts" class="btn btn-red">Заказать сборку</a>
             </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- ========== HERO SECTION ========== -->
     <section class="hero" id="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1>Строим дома вашей мечты по честной цене. Качество, проверенное временем.</h1>
-                <p>Гарантия на все виды работ 5 лет. Смета фиксируется в договоре.</p>
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <h1 class="hero-title">
+                Собираем ПК, которые <span class="text-red">работают на тебя</span>
+            </h1>
+            <p class="hero-subtitle">
+                Мощные сборки. Честные цены. Гарантия качества
+            </p>
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Гарантия 2 года</span>
+                </div>
+                <div class="hero-feature">
+                    <i class="fas fa-clock"></i>
+                    <span>Сборка от 3 дней</span>
+                </div>
+                <div class="hero-feature">
+                    <i class="fas fa-ruble-sign"></i>
+                    <span>Цена от 5 000 ₽</span>
+                </div>
             </div>
-            <div class="hero-form">
-                <h3>Рассчитать стоимость</h3>
-                <form onsubmit="event.preventDefault(); alert('Спасибо! Мы свяжемся с вами.');">
+            <div class="hero-buttons">
+                <a href="#contacts" class="btn btn-red btn-large">Рассчитать стоимость</a>
+                <a href="#services" class="btn btn-outline btn-large">Наши услуги</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ПРЕИМУЩЕСТВА ========== -->
+    <section class="advantages" id="advantages">
+        <div class="container">
+            <h2 class="section-title">3 причины выбрать <span class="text-red">PC RepairMan</span></h2>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Качественная работа</h3>
+                    <p>Тестируем каждый ПК перед выдачей. Никаких компромиссов — только проверенное железо.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Мощные сборки</h3>
+                    <p>Подбираем компоненты под ваши задачи: игры, работа, стримы, рендеринг.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>Низкие цены</h3>
+                    <p>На 20-30% дешевле магазинов. Прозрачная смета без скрытых накруток.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== УСЛУГИ ========== -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Что мы <span class="text-red">умеем</span></h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>Сборка ПК под заказ</h3>
+                    <p>Индивидуальная подборка компонентов под ваш бюджет и задачи</p>
+                    <span class="service-price">от 5 000 ₽</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <h3>Апгрейд компьютера</h3>
+                    <p>Улучшим ваш текущий ПК без полной замены системы</p>
+                    <span class="service-price">от 3 000 ₽</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>Диагностика и ремонт</h3>
+                    <p>Найдём и устраним любую неисправность</p>
+                    <span class="service-price">от 1 500 ₽</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3>Установка ПО</h3>
+                    <p>ОС, драйверы, оптимизация системы под максимум</p>
+                    <span class="service-price">от 2 000 ₽</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-broom"></i>
+                    </div>
+                    <h3>Чистка и обслуживание</h3>
+                    <p>Замена термопасты, удаление пыли, кабель-менеджмент</p>
+                    <span class="service-price">от 2 500 ₽</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Игровые конфигурации</h3>
+                    <p>Сборки для AAA-проектов, киберспорта и стримов</p>
+                    <span class="service-price">от 25 000 ₽</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ИСТОРИЯ КОМПАНИИ ========== -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">От гаража до <span class="text-red">профессионалов</span></h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-lead">
+                        Мы — обычные ребята, которые в 14 лет собрали свой первый ПК без помощи взрослых. 
+                        Сегодня <strong>PC RepairMan</strong> — это команда энтузиастов, которые знают о железе всё.
+                    </p>
+                    <p>
+                        Мы выросли из хобби в профессиональный сервис, но сохранили главный принцип: 
+                        <strong>делать честно и для людей.</strong>
+                    </p>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2025</div>
+                            <div class="timeline-text">Первый ПК своими руками</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2025</div>
+                            <div class="timeline-text">Открыли первую мастерскую</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2026</div>
+                            <div class="timeline-text">Полноценная компания PC RepairMan</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-placeholder">
+                        <i class="fas fa-users"></i>
+                        <span>Фото команды</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ЦЕНЫ ========== -->
+    <section class="prices" id="prices">
+        <div class="container">
+            <h2 class="section-title">Сборки под <span class="text-red">любой бюджет</span></h2>
+            <div class="prices-grid">
+                <div class="price-card">
+                    <div class="price-header">
+                        <h3>Бюджет</h3>
+                        <div class="price-amount">5 000 ₽</div>
+                        <span class="price-subtitle">Для учёбы и работы</span>
+                    </div>
+                    <ul class="price-features">
+                        <li><i class="fas fa-check"></i> Офисные задачи</li>
+                        <li><i class="fas fa-check"></i> Браузинг, документы</li>
+                        <li><i class="fas fa-check"></i> Онлайн-обучение</li>
+                        <li><i class="fas fa-check"></i> Базовая гарантия</li>
+                    </ul>
+                    <a href="#contacts" class="btn btn-outline">Заказать</a>
+                </div>
+                <div class="price-card price-card-popular">
+                    <div class="popular-badge">Популярный</div>
+                    <div class="price-header">
+                        <h3>Геймерский</h3>
+                        <div class="price-amount">50 000 ₽</div>
+                        <span class="price-subtitle">Для AAA-проектов</span>
+                    </div>
+                    <ul class="price-features">
+                        <li><i class="fas fa-check"></i> Высокий FPS в играх</li>
+                        <li><i class="fas fa-check"></i> RTX-видеокарта</li>
+                        <li><i class="fas fa-check"></i> Быстрый SSD</li>
+                        <li><i class="fas fa-check"></i> Расширенная гарантия</li>
+                        <li><i class="fas fa-check"></i> RGB-подсветка</li>
+                    </ul>
+                    <a href="#contacts" class="btn btn-red">Заказать</a>
+                </div>
+                <div class="price-card">
+                    <div class="price-header">
+                        <h3>Ультра</h3>
+                        <div class="price-amount">100 000+ ₽</div>
+                        <span class="price-subtitle">Для стримов и 4K</span>
+                    </div>
+                    <ul class="price-features">
+                        <li><i class="fas fa-check"></i> Максимальная мощность</li>
+                        <li><i class="fas fa-check"></i> Топовые компоненты</li>
+                        <li><i class="fas fa-check"></i> Жидкостное охлаждение</li>
+                        <li><i class="fas fa-check"></i> Премиум гарантия</li>
+                        <li><i class="fas fa-check"></i> Персональный менеджер</li>
+                    </ul>
+                    <a href="#contacts" class="btn btn-outline">Заказать</a>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- ========== ГАЛЕРЕЯ СОБРАННЫХ ПК ========== -->
+<section class="gallery" id="gallery">
+    <div class="container">
+        <h2 class="section-title">Наши <span class="text-red">работы</span></h2>
+        <p class="gallery-subtitle">Посмотрите на компьютеры, которые мы собрали для наших клиентов</p>
+        
+        <!-- Фильтры -->
+        <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">Все</button>
+            <button class="filter-btn" data-filter="gaming">Игровые</button>
+            <button class="filter-btn" data-filter="office">Офисные</button>
+            <button class="filter-btn" data-filter="stream">Для стримов</button>
+            <button class="filter-btn" data-filter="budget">Бюджетные</button>
+        </div>
+        
+        <!-- Галерея сетка -->
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Работа 1 -->
+            <div class="gallery-item" data-category="gaming">
+                <div class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600" alt="Игровой ПК RGB">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>🎮 Gaming Beast</h4>
+                            <p>RTX 3080 + i7-12700F</p>
+                            <span class="gallery-price">150 000 ₽</span>
+                        </div>
+                        <button class="gallery-view-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="gallery-tags">
+                    <span>Игровой</span>
+                    <span>RGB</span>
+                </div>
+            </div>
+            
+            <!-- Работа 2 -->
+            <div class="gallery-item" data-category="office">
+                <div class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600" alt="Офисный ПК">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>📊 Office Pro</h4>
+                            <p>i5-12400F + 16GB RAM</p>
+                            <span class="gallery-price">45 000 ₽</span>
+                        </div>
+                        <button class="gallery-view-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="gallery-tags">
+                    <span>Офисный</span>
+                    <span>Тихий</span>
+                </div>
+            </div>
+            
+            <!-- Работа 3 -->
+            <div class="gallery-item" data-category="stream">
+                <div class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=600" alt="ПК для стримов">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>🎬 Stream Master</h4>
+                            <p>RTX 3070 + Ryzen 7 5800X</p>
+                            <span class="gallery-price">180 000 ₽</span>
+                        </div>
+                        <button class="gallery-view-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="gallery-tags">
+                    <span>Стрим</span>
+                    <span>4K</span>
+                </div>
+            </div>
+            
+            <!-- Работа 4 -->
+            <div class="gallery-item" data-category="budget">
+                <div class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1555618568-9b8f73436a66?w=600" alt="Бюджетный ПК">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>💰 Budget King</h4>
+                            <p>GTX 1650 + i3-12100F</p>
+                            <span class="gallery-price">35 000 ₽</span>
+                        </div>
+                        <button class="gallery-view-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="gallery-tags">
+                    <span>Бюджетный</span>
+                    <span>Старт</span>
+                </div>
+            </div>
+            
+            <!-- Работа 5 -->
+            <div class="gallery-item" data-category="gaming">
+                <div class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1603481588273-2f908a9a7a1b?w=600" alt="Ультра гейминг">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>⚡ Ultra Gaming</h4>
+                            <p>RTX 4080 + i9-13900K</p>
+                            <span class="gallery-price">350 000 ₽</span>
+                        </div>
+                        <button class="gallery-view-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="gallery-tags">
+                    <span>Топ</span>
+                    <span>4K Gaming</span>
+                </div>
+            </div>
+            
+            <!-- Работа 6 -->
+            <div class="gallery-item" data-category="stream">
+                <div class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600" alt="Рабочая станция">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>🎨 Work Station</h4>
+                            <p>RTX 3060 + 64GB RAM</p>
+                            <span class="gallery-price">120 000 ₽</span>
+                        </div>
+                        <button class="gallery-view-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="gallery-tags">
+                    <span>Рендер</span>
+                    <span>Дизайн</span>
+                </div>
+            </div>
+            
+            <!-- Работа 7 -->
+            <div class="gallery-item" data-category="gaming">
+                <div class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=600" alt="Компактный ПК">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>🔥 Mini Beast</h4>
+                            <p>RTX 3060 + Ryzen 5 5600X</p>
+                            <span class="gallery-price">85 000 ₽</span>
+                        </div>
+                        <button class="gallery-view-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="gallery-tags">
+                    <span>Mini-ITX</span>
+                    <span>Компактный</span>
+                </div>
+            </div>
+            
+            <!-- Работа 8 -->
+            <div class="gallery-item" data-category="budget">
+                <div class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1576406189533-632375c464fa?w=600" alt="Учебный ПК">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>📚 Student PC</h4>
+                            <p>GTX 1650 + 16GB RAM</p>
+                            <span class="gallery-price">40 000 ₽</span>
+                        </div>
+                        <button class="gallery-view-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="gallery-tags">
+                    <span>Учёба</span>
+                    <span>Лёгкие игры</span>
+                </div>
+            </div>
+            
+            <!-- Работа 9 -->
+            <div class="gallery-item" data-category="office">
+                <div class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f78536788c6?w=600" alt="Бизнес ПК">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>💼 Business Class</h4>
+                            <p>i7-12700 + 32GB RAM</p>
+                            <span class="gallery-price">75 000 ₽</span>
+                        </div>
+                        <button class="gallery-view-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="gallery-tags">
+                    <span>Бизнес</span>
+                    <span>Надёжный</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Кнопка загрузить ещё -->
+        <div class="gallery-load-more">
+            <button class="btn btn-outline" id="loadMoreBtn">
+                <i class="fas fa-plus"></i> Загрузить ещё
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- ========== LIGHTBOX (МОДАЛЬНОЕ ОКНО) ========== -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">
+        <i class="fas fa-times"></i>
+    </button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+    <div class="lightbox-content">
+        <img src="" alt="" id="lightboxImage">
+        <div class="lightbox-info">
+            <h3 id="lightboxTitle"></h3>
+            <p id="lightboxSpecs"></p>
+            <span id="lightboxPrice"></span>
+        </div>
+    </div>
+    <div class="lightbox-thumbnails" id="lightboxThumbnails"></div>
+</div>
+    <!-- ========== ОТЗЫВЫ ========== -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2 class="section-title">Что говорят <span class="text-red">клиенты</span></h2>
+            <div class="reviews-slider">
+                <div class="reviews-track" id="reviewsTrack">
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">«Собрали игровой ПК за 3 дня! Всё работает идеально, температуры в норме. Рекомендую!»</p>
+                        <div class="review-author">
+                            <div class="review-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="review-info">
+                                <strong>Алексей М.</strong>
+                                <span>Геймер</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">«Отличный сервис! Помогли с апгрейдом старого компьютера. Теперь летает!»</p>
+                        <div class="review-author">
+                            <div class="review-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="review-info">
+                                <strong>Мария К.</strong>
+                                <span>Дизайнер</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">«Честные цены и прозрачная смета. Никаких сюрпризов. Буду обращаться ещё!»</p>
+                        <div class="review-author">
+                            <div class="review-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="review-info">
+                                <strong>Дмитрий С.</strong>
+                                <span>Стример</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews-controls">
+                    <button class="reviews-btn" id="prevReview"><i class="fas fa-chevron-left"></i></button>
+                    <button class="reviews-btn" id="nextReview"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Частые <span class="text-red">вопросы</span></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Сколько времени занимает сборка?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Обычно сборка занимает от 3 до 7 дней в зависимости от сложности конфигурации и наличия комплектующих.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Даёте ли гарантию?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Да! Мы предоставляем гарантию от 1 до 2 лет на все сборки. Также действует гарантия от производителей комплектующих.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Можно ли привезти свои комплектующие?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Конечно! Вы можете предоставить свои детали, мы только соберём и протестируем систему. Стоимость сборки в этом случае снижается.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Есть ли рассрочка?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Да, мы сотрудничаем с банками и предлагаем рассрочку до 12 месяцев без переплаты. Подробности уточняйте у менеджера.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- ========== ЧАТ-БОТ ========== -->
+<div class="chatbot-container" id="chatbotContainer">
+    <button class="chatbot-toggle" id="chatbotToggle">
+        <i class="fas fa-comments"></i>
+        <span class="chatbot-badge">3</span>
+    </button>
+    
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+            <div class="chatbot-info">
+                <div class="chatbot-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div>
+                    <h4>PC RepairMan Bot</h4>
+                    <span class="chatbot-status">
+                        <span class="status-dot"></span>
+                        Онлайн
+                    </span>
+                </div>
+            </div>
+            <button class="chatbot-close" id="chatbotClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="message bot-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p>Привет! 👋 Я виртуальный помощник PC RepairMan. Чем могу помочь?</p>
+                    <span class="message-time">Сейчас</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chatbot-quick-replies" id="chatbotQuickReplies">
+            <button class="quick-reply" data-message="Сколько стоит сборка?">💰 Сколько стоит сборка?</button>
+            <button class="quick-reply" data-message="Какие гарантии?">🛡️ Какие гарантии?</button>
+            <button class="quick-reply" data-message="Сроки сборки?">⏱️ Сроки сборки?</button>
+            <button class="quick-reply" data-message="Связаться с менеджером">👨‍💼 Связаться с менеджером</button>
+        </div>
+        
+        <div class="chatbot-input">
+            <input type="text" id="chatbotInput" placeholder="Введите сообщение...">
+            <button id="chatbotSend">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- ========== КАЛЬКУЛЯТОР СБОРКИ ========== -->
+<section class="calculator" id="calculator">
+    <div class="container">
+        <h2 class="section-title">Калькулятор <span class="text-red">сборки ПК</span></h2>
+        <p class="calculator-subtitle">Подберите компоненты и узнайте стоимость вашей идеальной сборки</p>
+        
+        <div class="calculator-content">
+            <div class="calculator-form">
+                <div class="calc-step" data-step="1">
+                    <h3><span class="step-number">1</span> Процессор (CPU)</h3>
+                    <div class="calc-options">
+                        <label class="calc-option">
+                            <input type="radio" name="cpu" value="25000" data-name="Intel Core i3-12100F">
+                            <div class="option-card">
+                                <span class="option-name">Intel Core i3-12100F</span>
+                                <span class="option-price">25 000 ₽</span>
+                            </div>
+                        </label>
+                        <label class="calc-option">
+                            <input type="radio" name="cpu" value="35000" data-name="Intel Core i5-12400F">
+                            <div class="option-card">
+                                <span class="option-name">Intel Core i5-12400F</span>
+                                <span class="option-price">35 000 ₽</span>
+                            </div>
+                        </label>
+                        <label class="calc-option">
+                            <input type="radio" name="cpu" value="50000" data-name="Intel Core i7-12700F">
+                            <div class="option-card">
+                                <span class="option-name">Intel Core i7-12700F</span>
+                                <span class="option-price">50 000 ₽</span>
+                            </div>
+                        </label>
+                        <label class="calc-option">
+                            <input type="radio" name="cpu" value="28000" data-name="AMD Ryzen 5 5600X">
+                            <div class="option-card">
+                                <span class="option-name">AMD Ryzen 5 5600X</span>
+                                <span class="option-price">28 000 ₽</span>
+                            </div>
+                        </label>
+                        <label class="calc-option">
+                            <input type="radio" name="cpu" value="45000" data-name="AMD Ryzen 7 5800X">
+                            <div class="option-card">
+                                <span class="option-name">AMD Ryzen 7 5800X</span>
+                                <span class="option-price">45 000 ₽</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="calc-step" data-step="2">
+                    <h3><span class="step-number">2</span> Видеокарта (GPU)</h3>
+                    <div class="calc-options">
+                        <label class="calc-option">
+                            <input type="radio" name="gpu" value="20000" data-name="NVIDIA GTX 1650">
+                            <div class="option-card">
+                                <span class="option-name">NVIDIA GTX 1650</span>
+                                <span class="option-price">20 000 ₽</span>
+                            </div>
+                        </label>
+                        <label class="calc-option">
+                            <input type="radio" name="gpu" value="35000" data-name="NVIDIA RTX 3050">
+                            <div class="option-card">
+                                <span class="option-name">NVIDIA RTX 3050</span>
+                                <span class="option-price">35 000 ₽</span>
+                            </div>
+                        </label>
+                        <label class="calc-option">
+                            <input type="radio" name="gpu" value="55000" data-name="NVIDIA RTX 3060">
+                            <div class="option-card">
+                                <span class="option-name">NVIDIA RTX 3060</span>
+                                <span class="option-price">55 000 ₽</span>
+                            </div>
+                        </label>
+                        <label class="calc-option">
+                            <input type="radio" name="gpu" value="80000" data-name="NVIDIA RTX 3070">
+                            <div class="option-card">
+                                <span class="option-name">NVIDIA RTX 3070</span>
+                                <span class="option-price">80 000 ₽</span>
+                            </div>
+                        </label>
+                        <label class="calc-option">
+                            <input type="radio" name="gpu" value="120000" data-name="NVIDIA RTX 3080">
+                            <div class="option-card">
+                                <span class="option-name">NVIDIA RTX 3080</span>
+                                <span class="option-price">120 000 ₽</span>
+                            </div>
+                        </label>
+                        <label class="calc-option">
+                            <input type="radio" name="gpu" value="180000" data-name="NVIDIA RTX 4080">
+                            <div class="option-card">
+                                <span class="option-name">NVIDIA RTX 4080</span>
+                                <span class="option-price">180 000 ₽</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="calc-step" data-step="3">
+                    <h3><span class="step-number">3</span> Оперативная память (RAM)</h3>
+                    <div class="calc-options">
+                        <label class="calc-option">
+                            <input type="radio" name="ram" value="5000" data-name="8GB DDR4">
+                            <div class="option-card">
+                                <span class="option-name">8GB DDR4</span>
+                                <span class="option-price">5 000 ₽</span>
+                            </div>
+                        </label>
+                        <label class="calc-option">
+                            <input type="radio" name="ram" value="8000" data-name="16GB DDR4">
+                            <div class="option-card">
+                                <span class="option-name">16GB DDR4</span>
+                                <span class="option-price">8 000 ₽</span>
+                            </div>
+                        </label>
+                        <label class="calc-option">
+                            <input type="radio" name="ram" value="15000" data-name="32GB DDR4">
+                            <div class="option-card">
+                                <span class="option-name">32GB DDR4</span>
+                                <span class="option-price">15 000 ₽</span>
+                            </div>
+                        </label>
+                        <label class="calc-option">
+                            <input type="radio" name="ram" value="20000" data-name="32GB DDR5">
+                            <div class="option-card">
+                                <span class="option-name">32GB DDR5</span>
+                                <span class="option-price">20 000 ₽</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="calc-step" data-step="4">
+                    <h3><span class="step-number">4</span> Накопитель (Storage)</h3>
+                    <div class="calc-options">
+                        <label class="calc-option">
+                            <input type="radio" name="storage" value="3000" data-name="SSD 256GB">
+                            <div class="option-card">
+                                <span class="option-name">SSD 256GB</span>
+                                <span class="option-price">3 000 ₽</span>
+                            </div>
+                        </label>
+                        <label class="calc-option">
+                            <input type="radio" name="storage" value="5000" data-name="SSD 500GB">
+                            <div class="option-card">
+                                <span class="option-name">SSD 500GB</span>
+                                <span class="option-price">5 000 ₽</span>
+                            </div>
+                        </label>
+                        <label class="calc-option">
+                            <input type="radio" name="storage" value="8000" data-name="SSD 1TB NVMe">
+                            <div class="option-card">
+                                <span class="option-name">SSD 1TB NVMe</span>
+                                <span class="option-price">8 000 ₽</span>
+                            </div>
+                        </label>
+                        <label class="calc-option">
+                            <input type="radio" name="storage" value="15000" data-name="SSD 2TB NVMe">
+                            <div class="option-card">
+                                <span class="option-name">SSD 2TB NVMe</span>
+                                <span class="option-price">15 000 ₽</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="calc-step" data-step="5">
+                    <h3><span class="step-number">5</span> Дополнительные опции</h3>
+                    <div class="calc-options calc-checkboxes">
+                        <label class="calc-option">
+                            <input type="checkbox" name="extra" value="5000" data-name="Корпус с RGB">
+                            <div class="option-card">
+                                <span class="option-name">🎨 Корпус с RGB</span>
+                                <span class="option-price">+5 000 ₽</span>
+                            </div>
+                        </label>
+                        <label class="calc-option">
+                            <input type="checkbox" name="extra" value="8000" data-name="Жидкостное охлаждение">
+                            <div class="option-card">
+                                <span class="option-name">❄️ Жидкостное охлаждение</span>
+                                <span class="option-price">+8 000 ₽</span>
+                            </div>
+                        </label>
+                        <label class="calc-option">
+                            <input type="checkbox" name="extra" value="3000" data-name="Установка Windows">
+                            <div class="option-card">
+                                <span class="option-name">🪟 Установка Windows</span>
+                                <span class="option-price">+3 000 ₽</span>
+                            </div>
+                        </label>
+                        <label class="calc-option">
+                            <input type="checkbox" name="extra" value="2000" data-name="Кабель-менеджмент">
+                            <div class="option-card">
+                                <span class="option-name">🔌 Кабель-менеджмент</span>
+                                <span class="option-price">+2 000 ₽</span>
+                            </div>
+                        </label>
+                        <label class="calc-option">
+                            <input type="checkbox" name="extra" value="5000" data-name="Расширенная гарантия">
+                            <div class="option-card">
+                                <span class="option-name">🛡️ Расширенная гарантия</span>
+                                <span class="option-price">+5 000 ₽</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="calc-actions">
+                    <button class="btn btn-outline" id="calcReset">
+                        <i class="fas fa-undo"></i> Сбросить
+                    </button>
+                    <button class="btn btn-red" id="calcSubmit">
+                        <i class="fas fa-check"></i> Заказать сборку
+                    </button>
+                </div>
+            </div>
+            
+            <div class="calculator-summary">
+                <h3>Ваша конфигурация</h3>
+                <div class="summary-items" id="summaryItems">
+                    <p class="summary-empty">Выберите компоненты для расчёта</p>
+                </div>
+                <div class="summary-total">
+                    <span>Итого:</span>
+                    <span id="totalPrice">0 ₽</span>
+                </div>
+                <div class="summary-work">
+                    <span>Работа по сборке:</span>
+                    <span id="workPrice">5 000 ₽</span>
+                </div>
+                <div class="summary-grand-total">
+                    <span>Всего:</span>
+                    <span id="grandTotal">5 000 ₽</span>
+                </div>
+                <button class="btn btn-red btn-full" id="saveConfig">
+                    <i class="fas fa-save"></i> Сохранить конфигурацию
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- ========== КОНТАКТЫ ========== -->
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <h2 class="section-title">Готовы заказать? <span class="text-red">Свяжитесь с нами</span></h2>
+            <div class="contacts-content">
+                <div class="contacts-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Телефон</strong>
+                            <a href="tel:+79990000000">+7 (950) 460-52-65</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-telegram"></i>
+                        <div>
+                            <strong>Telegram</strong>
+                            <a href="#">@pcrepairmann</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <strong>WhatsApp</strong>
+                            <a href="#">+7 (950) 460-52-65</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Адрес</strong>
+                            <span>г. Пермь, п. Сылва, ул. Кореева, д. 25</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
                     <div class="form-group">
-                        <input type="text" placeholder="Ваше имя" required>
+                        <input type="text" name="name" placeholder="Ваше имя" required>
                     </div>
                     <div class="form-group">
-                        <input type="tel" placeholder="Телефон" required>
+                        <input type="tel" name="phone" placeholder="Телефон" required>
                     </div>
-                    <button type="submit" class="btn">Получить смету</button>
+                    <div class="form-group">
+                        <select name="type" required>
+                            <option value="" disabled selected>Тип сборки</option>
+                            <option value="budget">Бюджет (5 000 ₽)</option>
+                            <option value="gamer">Геймерский (50 000 ₽)</option>
+                            <option value="ultra">Ультра (100 000+ ₽)</option>
+                            <option value="custom">Индивидуальная</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Комментарий" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-red btn-large btn-full">Отправить заявку</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- History Section -->
-    <section class="history" id="history">
-        <div class="container history-grid">
-            <div class="history-img">
-                <!-- Плейсхолдер для фото Олега -->
-                <img src="img/oleg.png.jpg" alt="Руководитель Олег">
-            </div>
-            <div class="history-text">
-                <h2>«Я знаю цену каждому рублю, потому что начинал с нуля.»</h2>
-                <p>Меня зовут Олег. 10 лет назад я был студентом без связей и капитала. Я начал работать своими руками, чтобы оплатить учебу. Я видел, как другие фирмы накручивают цены и халтурят.</p>
-                <p>Я решил сделать иначе: строить так, как строил бы для себя, и брать честную плату за труд. Сегодня "ДомСтрой" — это команда профи, но мой принцип остался прежним: качество не должно стоить дорого.</p>
-                <p><strong>— Олег, основатель ДомСтрой</strong></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Advantages -->
-    <section class="advantages">
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
         <div class="container">
-            <h2 class="section-title">Три причины доверить нам свой дом</h2>
-            <div class="adv-grid">
-                <div class="adv-card">
-                    <div class="adv-icon">★</div>
-                    <h3>Качественная работа</h3>
-                    <p>Используем только сертифицированные материалы. Собственный технадзор на каждом этапе. Никаких "кривых стен".</p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#" class="logo">
+                        <i class="fas fa-microchip"></i>
+                        <span>PC Repair<span class="text-red">Man</span></span>
+                    </a>
+                    <p>Сборка и ремонт компьютеров с душой</p>
                 </div>
-                <div class="adv-card">
-                    <div class="adv-icon">👷</div>
-                    <h3>Специализированные работники</h3>
-                    <p>В штате не разнорабочие, а узкие профи: каменщики, электрики, кровельщики с опытом от 7 лет.</p>
+                <div class="footer-links">
+                    <a href="#services">Услуги</a>
+                    <a href="#prices">Цены</a>
+                    <a href="#about">О нас</a>
+                    <a href="#contacts">Контакты</a>
                 </div>
-                <div class="adv-card">
-                    <div class="adv-icon">₽</div>
-                    <h3>Низкие цены</h3>
-                    <p>Прямые контракты с поставщиками и отсутствие посредников позволяют нам держать цены на 15-20% ниже рынка.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="section-title">Что мы строим и ремонтируем</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <img src="img/cluch.png.webp" alt="Дом под ключ">
-                    <div class="service-overlay">
-                        <h3>Строительство домов под ключ</h3>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="img/fundament.png.jpg" alt="Фундамент">
-                    <div class="service-overlay">
-                        <h3>Фундаментные работы</h3>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="img/krovlya.png.jpg" alt="Кровля">
-                    <div class="service-overlay">
-                        <h3>Кровля и фасады</h3>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="img/otdelka.png.jpg" alt="Ремонт">
-                    <div class="service-overlay">
-                        <h3>Внутренняя отделка</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Slider -->
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <h2 class="section-title">Наши работы говорят громче слов</h2>
-            <div class="slider-container">
-                <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
-                <div class="slider-track" id="sliderTrack">
-                    <!-- Slide 1 -->
-                    <div class="slide">
-                        <img src="img/foresthome.png.jpg" alt="Дом 1">
-                        <div class="slide-info">
-                            <h3>Дом в лесу</h3>
-                            <p>Срок: 4 месяца | Эконом</p>
-                        </div>
-                    </div>
-                    <!-- Slide 2 -->
-                    <div class="slide">
-                        <img src="img/kotteg.png.jpg" alt="Дом 2">
-                        <div class="slide-info">
-                            <h3>Коттедж "Премиум"</h3>
-                            <p>Срок: 8 месяцев | Премиум</p>
-                        </div>
-                    </div>
-                    <!-- Slide 3 -->
-                    <div class="slide">
-                        <img src="img/ofis.png.jpeg" alt="Ремонт">
-                        <div class="slide-info">
-                            <h3>Ремонт офиса</h3>
-                            <p>Срок: 1 месяц | Бизнес</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Steps -->
-    <section class="steps">
-        <div class="container">
-            <h2 class="section-title">Путь к вашему новому дому</h2>
-            <div class="steps-container">
-                <div class="step-item">
-                    <div class="step-num">1</div>
-                    <h3>Заявка и замер</h3>
-                    <p>Бесплатно</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-num">2</div>
-                    <h3>Смета и договор</h3>
-                    <p>Фиксация цены</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-num">3</div>
-                    <h3>Старт работ</h3>
-                    <p>Закупка материалов</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-num">4</div>
-                    <h3>Сдача работ</h3>
-                    <p>Оплата по факту</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-num">5</div>
-                    <h3>Ключи</h3>
-                    <p>Финальная уборка</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lead Magnet -->
-    <section class="lead-magnet">
-        <div class="container">
-            <h2>Сомневаетесь в расчетах?</h2>
-            <p>Пришлите нам смету от другой компании, и мы найдем, где можно сэкономить без потери качества.</p>
-            <form class="lead-form" onsubmit="event.preventDefault(); alert('Смета отправлена!');">
-                <input type="email" placeholder="Ваш Email для связи" required>
-                <button type="submit" class="btn">Загрузить смету</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>ДомСтрой</h4>
-                    <p>Строим будущее с заботой о настоящем.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Контакты</h4>
-                    <ul>
-                        <li>8 (950) 460-52-65</li>
-                        <li>г. Москва, ул. Строителей, д. 10</li>
-                        <li>info@domstroy.ru</li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Соцсети</h4>
-                    <ul>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">VKontakte</a></li>
-                        <li><a href="#">Telegram</a></li>
-                    </ul>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 ДомСтрой. Все права защищены.</p>
+                <a href="#">Политика конфиденциальности</a>
+                <span>© 2026 PC RepairMan. Все права защищены.</span>
             </div>
         </div>
     </footer>
 
-    <!-- Modal Window -->
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h3 style="text-align: center; margin-bottom: 20px;">Заказать звонок</h3>
-            <form onsubmit="event.preventDefault(); alert('Мы перезвоним вам в течение 15 минут!'); document.getElementById('modal').style.display='none';">
-                <div class="form-group">
-                    <input type="text" placeholder="Ваше имя" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" placeholder="Ваш телефон" required>
-                </div>
-                <button type="submit" class="btn" style="width: 100%;">Жду звонка</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Подключаем скрипт -->
     <script src="script.js"></script>
 </body>
 </html>
